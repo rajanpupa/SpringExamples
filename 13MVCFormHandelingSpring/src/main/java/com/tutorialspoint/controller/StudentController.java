@@ -12,7 +12,7 @@ import com.tutorialspoint.model.Student;
 @Controller
 public class StudentController {
 
-   @RequestMapping(value = "/student", method = RequestMethod.GET)
+   @RequestMapping(value = {"/", "/student"}, method = RequestMethod.GET)
    public ModelAndView student() {
       return new ModelAndView("student", "command", new Student());
    }

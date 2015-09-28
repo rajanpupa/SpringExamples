@@ -13,4 +13,12 @@
 	* can customize this file name and location by adding the servlet listener ContextLoaderListener in your web.xml	
 
 ## servlet configuration
-	* <context:component-scan...> will activate the MVC annotation scanning capability.
+	* <context:component-scan...> will activate the basic annotation scanning capability and define the package to scan
+	* <mvc:annotation-driven/> will activate the mvc annotations like @RequestMapping ...
+	
+### Basic annotations
+	
+	* @Controller
+	* @Service
+	* @Repository
+	* @Component
