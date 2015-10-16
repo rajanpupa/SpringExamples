@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="customerService" class="general.CustomerService">
+		<property name="name" value="rajn Upadhyay" />
+		<property name="url" value="http://rajanpupa.blogspot.com" />
+	</bean>
+
+	<bean id="hijackAroundMethodBeanAdvice" class="general.aop.HijackAroundMethod" />
+
+	<bean id="customerServiceProxy" 
+                class="org.springframework.aop.framework.ProxyFactoryBean">
+
+		<!-- All the methods in customerService will be hijacked  -->
+		<property name="target" ref="customerService" />
+		<property name="interceptorNames">
+			<list>
+				<value>hijackAroundMethodBeanAdvice</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>

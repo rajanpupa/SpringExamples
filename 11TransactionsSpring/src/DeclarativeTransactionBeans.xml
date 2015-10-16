@@ -21,7 +21,7 @@
   
    <tx:advice id="txAdvice"  transaction-manager="transactionManager">
       <tx:attributes>
-      <tx:method name="create"/>
+      	<tx:method name="create"/>
       </tx:attributes>
    </tx:advice>
 	
@@ -30,7 +30,6 @@
       	expression="execution(* declarativeTransactionManagement.StudentJDBCTemplate.create(..))"/>
       
       <aop:advisor pointcut-ref="createOperation" advice-ref="txAdvice" />
-      
    </aop:config>
 	
    <!-- Initialization for TransactionManager -->

@@ -13,7 +13,7 @@
 ### Types of Advice
 	
 	* before : Run advice before the a method execution.
-	* after : Run advice after the a method execution regardless of its outcome.
-	* after-returning : 
-	* after-throwing  :
-	* around : 
+	* after : Run advice after the a method execution regardless of its outcome. finally
+	* after-returning : only after successful return
+	* after-throwing  : runs only if the joinpoint throws some exception
+	* around : most powerful, proceed() method, method object.

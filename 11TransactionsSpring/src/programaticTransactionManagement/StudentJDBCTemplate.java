@@ -19,8 +19,7 @@ public class StudentJDBCTemplate implements StudentDAO {
       this.jdbcTemplateObject = new JdbcTemplate(dataSource);
    }
 
-   public void setTransactionManager(
-      PlatformTransactionManager transactionManager) {
+   public void setTransactionManager(PlatformTransactionManager transactionManager) {
       this.transactionManager = transactionManager;
    }
 

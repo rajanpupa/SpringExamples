@@ -14,6 +14,11 @@ public class HelloController{
 	public @ResponseBody String defaultMethod(){
 		return "Hello there";
 	}
+	
+	@RequestMapping(value="/stop")
+	public @ResponseBody String stopMethod(){
+		return "Stop method should have been stopped by the interceptor";
+	}
  
    @RequestMapping(value="print", method = RequestMethod.GET)
    public String printHello(ModelMap model) {
