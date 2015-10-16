@@ -12,4 +12,4 @@
  ### Use cases
   * to add some generic messaege to the model
   * to change the route of controller, eg. redirect to some other page before returning false from preHandle()
-  
+  * 

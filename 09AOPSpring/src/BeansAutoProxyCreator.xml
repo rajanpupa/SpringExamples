@@ -40,5 +40,23 @@
 		</property>
 		<property name="advice" ref="hijackAroundMethodBeanAdvice" />
 	</bean>
+	
+	<!-- can also use other implementations of AutoProxyCreator like:
+		. DefaultAdvisorAutoProxyCreator - see below
+	  -->
+	<!-- <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="beanNames">
+			<list>
+				<value>*customerService</value>
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>customerAdvisor</value>
+			</list>
+		</property>
+	</bean> -->
 
+	<!-- No need to set advisor bean in its property  -->
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" />
 </beans>
