@@ -44,7 +44,8 @@
 	<!-- can also use other implementations of AutoProxyCreator like:
 		. DefaultAdvisorAutoProxyCreator - see below
 	  -->
-	<!-- <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+	<!-- 
+	<bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
 		<property name="beanNames">
 			<list>
 				<value>*customerService</value>

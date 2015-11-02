@@ -34,13 +34,13 @@
 	
    <!-- Initialization for TransactionManager -->
    <bean id="transactionManager"
-   class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+   		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
       <property name="dataSource"  ref="dataSource" />    
    </bean>
 
    <!-- Definition for studentJDBCTemplate bean -->
    <bean id="studentJDBCTemplate"  
-   class="declarativeTransactionManagement.StudentJDBCTemplate">
+   		class="declarativeTransactionManagement.StudentJDBCTemplate">
       <property name="dataSource"  ref="dataSource" />  
    </bean>
 
